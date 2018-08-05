@@ -1,0 +1,16 @@
+development:
+    driver: mymysql
+    open: tcp:127.0.0.1:63306*sample/root/password
+#development:
+#    driver: postgres
+#    open: tcp:localhost:3306*hooop/postgres/yoshi0923
+    
+customimport:
+    driver: customdriver
+    open: customdriver open
+    import: github.com/custom/driver
+    dialect: mysql
+
+environment_variable_config:
+    driver: $DB_DRIVER
+    open: $DATABASE_URL
